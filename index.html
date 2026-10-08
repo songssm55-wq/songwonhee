@@ -9,15 +9,24 @@
 <meta property="og:site_name" content="손권희닷컴">
 <meta property="og:title" content="손권희닷컴 | SONGWONHEE">
 <meta property="og:description" content="환승역은 끝이 아니라 다시 출발하는 곳입니다.">
-<!-- 배포 후: 대표 사진 주소로 바꾸세요 (카카오톡·페이스북 공유 미리보기용) -->
-<meta property="og:image" content="https://songwonhee.com/images/og.jpg">
+<meta property="og:url" content="https://songwonhee.vercel.app/">
+<link rel="canonical" href="https://songwonhee.vercel.app/">
+<!-- 카카오톡·페이스북 공유 미리보기용 대표 사진 (도메인을 연결하면 주소를 함께 바꾸세요) -->
+<meta property="og:image" content="https://songwonhee.vercel.app/images/og.jpg">
+<meta property="og:image:alt" content="손권희 시집 『환승역』">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="손권희닷컴 | SONGWONHEE">
+<meta name="twitter:description" content="환승역은 끝이 아니라 다시 출발하는 곳입니다.">
+<meta name="twitter:image" content="https://songwonhee.vercel.app/images/og.jpg">
+<meta name="theme-color" content="#F6EFE9">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232B4A8B'/%3E%3Ccircle cx='32' cy='32' r='13' fill='none' stroke='%23FBFAF6' stroke-width='6'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"손권희","alternateName":"SONGWONHEE","jobTitle":"작가 · 전문청능사 · 강연가 · 부모교육가","sameAs":["https://www.youtube.com/channel/UCPPL7v4y1mHvAZQoHRkhtoQ"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://songwonhee.vercel.app/#person","name":"손권희","alternateName":["SONGWONHEE","손송미"],"url":"https://songwonhee.vercel.app/","image":"https://songwonhee.vercel.app/images/profile.jpg","jobTitle":"작가 · 전문청능사 · 강연가 · 부모교육가","sameAs":["https://www.youtube.com/channel/UCPPL7v4y1mHvAZQoHRkhtoQ"]},{"@type":"Book","name":"환승역","alternativeHeadline":"살아낸 시간 끝에서, 다시 나에게로","author":{"@id":"https://songwonhee.vercel.app/#person"},"illustrator":{"@type":"Person","name":"김동주"},"publisher":{"@type":"Organization","name":"북랩"},"datePublished":"2026-09-10","isbn":"9791175984738","genre":"시","inLanguage":"ko","image":"https://songwonhee.vercel.app/images/cover.jpg"}]}</script>
 <style>
 /* 레이아웃: 첫 화면은 편지처럼(아치 사진 + 가로 문구), 그 아래는 시집처럼(표지 그림 띠 · 차례 · 명조 제목) */
 :root{
@@ -228,7 +237,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
     <nav class="menu" id="menu" aria-label="주 메뉴"><ol id="menuList"></ol></nav>
   </div>
 </header>
-<main id="main" tabindex="-1"></main>
+<main id="main" tabindex="-1"><noscript><section><div class="narrow"><h1>손권희닷컴</h1><p class="lead" style="margin-top:14px">삶의 환승역을 이야기하는 사람, 손권희. 작가 · 전문청능사 · 강연가 · 부모교육가. 시집 『환승역』(북랩, 2026).</p><p style="margin-top:14px">이 사이트는 자바스크립트를 켜야 내용이 보입니다.</p></div></section></noscript></main>
 <footer><div class="wrap" id="foot"></div></footer>
 
 <script src="content.js"></script>
@@ -257,7 +266,7 @@ home(){
   return `
   <section class="hero"><div class="wrap">
     <img src="${IMG.profile}" alt="손권희 프로필 사진" fetchpriority="high">
-    <h1>환승역은 끝이 아니라<br>다시 출발하는 곳입니다.</h1>
+    <h1>${esc(SITE.tagline).replace("아니라 ","아니라<br>")}</h1>
     <p class="titles">${esc(SITE.titles)}</p>
     <a class="btn rose" href="#profile">손권희 더 알아보기</a>
   </div></section>
@@ -271,7 +280,7 @@ home(){
       <p class="eyebrow">손권희 시집 · ${esc(BOOK.publisher)} · ${esc(BOOK.date)}</p>
       <h2>${esc(BOOK.title)}</h2>
       <p class="sub">${esc(BOOK.subtitle)}</p>
-      <p class="lead">${esc(HOME.intro)}</p>
+      <p class="lead">${esc(HOME.bookLine)}</p>
       <div class="parts">${BOOK.parts.map(p=>`<div><small>${esc(p.n)}</small><b>${esc(p.title)}</b></div>`).join("")}</div>
       <div class="row" style="margin-top:8px"><a class="btn" href="#book">책 자세히 보기</a></div>
     </div>
@@ -451,6 +460,9 @@ $("#foot").innerHTML=`<a class="logo" href="#home"><b>${esc(SITE.name)}</b><span
   <span>© ${new Date().getFullYear()} ${esc(SITE.name)}</span>`;
 document.addEventListener("click",e=>{const a=e.target.closest("a[data-type]"); if(a) wantedType=a.dataset.type;});
 $("#burger").onclick=()=>{const o=$("#menu").classList.toggle("open");$("#burger").setAttribute("aria-expanded",o);};
+const closeMenu=()=>{if($("#menu").classList.contains("open")){$("#menu").classList.remove("open");$("#burger").setAttribute("aria-expanded","false");$("#burger").focus();}};
+addEventListener("keydown",e=>{if(e.key==="Escape") closeMenu();});
+document.addEventListener("click",e=>{if(!e.target.closest("#menu,#burger")) closeMenu();});
 addEventListener("hashchange",render);
 render();
 </script>
