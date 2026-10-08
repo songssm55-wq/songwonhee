@@ -160,6 +160,9 @@ const YOUTUBE = {
    언론 보도 / 방송·인터뷰 / 강연·행사 / 수상·위촉 / 사진 / 프리저브드플라워 작품
    견본: { type:"언론 보도", date:"2026-09-15", media:"○○일보", title:"기사 제목", summary:"직접 쓴 2~3줄 요약", url:"https://..." }, */
 const ARCHIVE = [
+  { type:"언론 보도", date:"2024-05-10", media:"경기헤드뉴스", title:"수원시 영통구 원천동 저소득 난청대상자를 위해 중앙보청기 손권희 난청지원센터와 MOU 체결", summary:"원천동 행정복지센터와 업무협약을 맺고, 동에서 추천한 저소득 난청 주민에게 보청기를 무료로 지원하기로 했습니다.", url:"https://www.ghnews.net/mobile/article.html?no=130839" },
+  { type:"언론 보도", date:"2023-12-13", media:"뉴스Q", title:"수원시 팔달구 우만2동 주민자치회 손권희 위원 「100세 시대 청각관리」 쏙쏙특강 진행", summary:"우만2동 주민자치회 쏙쏙특강에서 난청 예방과 원인, 보청기 선택·사용법을 강의하고 강의 뒤 무료 청력검사를 진행했습니다.", url:"https://www.newsq.kr/news/articleView.html?idxno=87694" },
+  { type:"언론 보도", date:"2023-08-28", media:"월간인물", title:"손권희 난청지원센터, 수원시 영통구 매탄1동 저소득 홀몸어르신 보청기 지원", summary:"매탄1동 저소득 홀몸어르신에게 약 150만 원 상당의 보청기를 기증하고, 정확한 진단을 위해 병원 동행도 약속했습니다.", url:"https://www.monthlypeople.com/news/articleView.html?idxno=640561" },
 ];
 const ARCHIVE_TYPES = ["언론 보도","방송·인터뷰","강연·행사","수상·위촉","사진","프리저브드플라워 작품"];
 
